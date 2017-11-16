@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>响应式布局</title>
+		<meta name="viewport" content="width=device-width" />
+		<style>
+			/*只有带屏幕的设备和 最小宽度是多少 才会执行这个*/
+			
+			/*min-width >   max-width<=*/
+			
+			/*width<=400*/
+			@media only screen and (max-width: 400px) {
+				.box{background-color: blue;}
+			}
+			/*400<width<=800*/
+			@media only screen and (min-width: 400px) and (max-width:800px) {
+				.box{background-color: green;}
+			}
+			/*width>800*/
+			@media only screen and (min-width: 800px) {
+				.box{background-color: red;}
+			}
+			.box{
+				height: 100px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box"></div>
+		<img src="img/7.jpg" />
+		
+	</body>
+	
+	<script>
+//		获取加载网页时的宽度
+		var width=document.documentElement.clientWidth;
+		//打印日志+ Java JS +都可以关联字符串
+		console.log("width:"+"hello"+"good"+width);
+	</script>
+	
+</html>

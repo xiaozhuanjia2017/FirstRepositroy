@@ -1,0 +1,163 @@
+@charset "utf-8"; /*当前css文件字符集*/
+
+/*公共样式*/
+/*让所有标签的默认margin padding都为0*/
+*{margin: 0px;padding: 0px;}
+
+/*整体框架样式*/
+html{width:100%;height: 100%;}
+body{width: 100%;height: 100%;}
+
+.box{
+	width:100%;height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.pages{
+	width: 100%;height: 400%;
+	position: absolute;
+}
+
+.page{
+	width: 100%;height: 25%;
+	position: relative;
+}
+.page img{
+	position: absolute;
+}
+
+.page1{background-color: #00ccff;}
+.page2{background-color: black;}
+.page3{background-color: blue;}
+.page4{background-color: yellow;}
+
+/*第一页*/
+.page1-cloud{
+	width: 100%;
+	height:100%;
+}
+.page1-elements{
+	width: 90%;
+	height: 90%;
+	left: 5%;
+	top: 5%;
+}
+.page1-txt{
+	width: 70%;
+	left: 15%;
+	top: 20%;
+}
+.page1-fl1{
+	width: 15%;
+	top: 20%;
+	left: 10%;
+	/*改变变化的 锚点*/
+	transform-origin: center bottom; 
+	animation: rotateAnim linear 2s infinite;
+	
+}
+.page1-fl2{
+	width: 15%;
+	right: 20%;
+	top: 30%;
+}
+.page1-build{
+	width:100%;
+	bottom: 0px;
+}
+.page1-flight{
+	width: 70%;
+	left: 15%;
+	bottom: 30%;
+	animation-name:scaleAnim ;/*动画名*/
+	animation-timing-function: linear;/*执行函数*/
+	animation-duration: 2s;/*执行时间*/
+	animation-iteration-count: infinite;/*执行次数*/
+	
+}
+
+@keyframes scaleAnim{
+	0%{}/*不写代表开始状态*/
+	50%{transform: scale(0.8);}
+	100%{}
+}
+
+@keyframes rotateAnim{
+	0%{}
+	25%{transform: rotate(-45deg);}
+	50%{}
+	75%{transform: rotate(45deg);}
+	100%{}
+}
+
+/*第二页*/
+.page2-bg{
+	width: 100%;
+	height: 100%;
+	display: none;/*不可见*/
+}
+.page2-farm{
+	width: 70%;
+	right: -70%;
+	top: 30%;
+}
+.page2-it{
+	width: 70%;
+	top: 50%;
+	right: -70%;
+}
+
+/*第三页*/
+.page3-bg{
+	width: 100%;
+	height: 100%;
+}
+.page3-station{
+	width: 100%;
+	bottom: 0px;
+}
+.page3-bus{
+	width:60%;
+	left: 0%;
+	bottom: 5%;
+}
+.page3-avatar{
+	width: 30%;
+	bottom: 5%;
+	right: -30%;
+}
+
+/*第四页*/
+.page4-bg{
+	width: 100%;
+	height: 100%;
+}
+.page4-light{
+	height: 70%;
+	bottom: 0px;
+	left: 5%;
+}
+
+/*其他样式*/
+.music{
+	position: absolute;
+	right: 5%;
+	animation: circleAnim linear 2s infinite;
+}
+.arrow{
+	position: absolute;
+	bottom: 3%;
+	width: 20%;
+	left: 40%;
+	animation: arrowAnim linear 2s infinite;
+}
+@keyframes arrowAnim{
+	0%{}
+	50%{bottom: 5%;transform: scale(0.8);}
+	100%{}
+}
+@keyframes circleAnim{
+	from{}
+	to{transform: rotate(360deg);}
+}
